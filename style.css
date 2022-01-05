@@ -1,0 +1,48 @@
+/* applies a 1px border to all elements */
+/* * {border: solid 1px;} */
+
+#heading {
+    background: silver;
+    height: 50px;
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+}
+
+#treeslink {
+    height: 75px;
+    width: 120px;
+    float: left;
+    text-align: center;
+    background: #6EE0B5;
+}
+
+#mountainslink {
+    height: 75px;
+    width: 120px;
+    text-align: center;
+    float: right;
+    background: #E09E63;
+}
+
+#bodytext {
+    width: 80%;
+    top: 100px;
+    min-width: 500px;
+}
+
+body {
+    background-color: #5880E0;
+}
+
+nav {
+    height: 100px;
+    border: 2px solid black;
+    /* margin seperates elements from other elements
+    /* margin percentages are calculated from the element's direct parent*/
+    width: 100%;
+    margin: 10px;
+    /* padding separates an elements "interior" contents from the border */
+    /* padding will always increase the total size of an element*/
+    background: #324F94;
+}

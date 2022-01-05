@@ -4,38 +4,7 @@
 <head>
   <meta attribute="true" charset="utf-8">
   <title>Our Beautiful Gallery</title>
-
-  <style>
-      #heading {
-          background: silver;
-          height: 50px;
-          width: 100%;
-          text-align: center;
-      }
-      #treeslink {
-          height: 75px;
-          width: 120px;
-          left: 100px;
-          position: fixed;
-          text-align: center;
-          background: palegreen;
-      }
-      #mountainslink {
-          height: 75px;
-          width: 120px;
-          right: 100px;
-          text-align: center;
-          position: fixed;
-          background: peru;
-      }
-      #bodytext {
-          position: relative;
-          width: 80%;
-          top: 100px;
-          min-width: 500px;
-      }
-
-  </style>
+  <link href="style.css" type="text/css" rel="stylesheet">
 </head>
 <body>
 
@@ -46,12 +15,11 @@
         <h1>
             Our Beautiful Gallery
         </h1>
-        <div id="search">
-        Search Bar
-        </div>
     </div>
 
 </header>
+
+<nav>
 <div id="treeslink">
     <h2>
         <a href="https://bradyjcamp.github.io/Lab-04-HTML-website/Index.html">Trees</a>
@@ -59,9 +27,12 @@
 </div>
 <div id="mountainslink">
     <h2>
-    Mountains
+        Mountains
     </h2>
 </div>
+</nav>
+
+
 <p id="bodytext">
 
     Unknown mountain near Lake Vahalla<br>
