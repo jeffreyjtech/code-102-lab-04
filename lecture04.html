@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<!-- Class 04 test page; Jeffrey Jenkins; 1-4-22-->
+<!-- this is for meta data-->
+<head>
+  <!-- An attribute modifies an element in a specific way, they are written inside of tags with "key = 'value'" (double quotes recommended) -->
+  <meta attribute="true" charset="utf-8">
+  <title>This is the website title</title>
+
+  <style>
+      #heading {
+          background: palegoldenrod;
+          height: 50px;
+          width: 400px;
+      }
+      #nav {
+          height: 900px;
+          width: 100px;
+          position: fixed;
+      }
+      #body {
+          font-size: large; 
+          position: relative;
+          left: 120px;
+      }
+      #search {
+          position: absolute;
+          right: 100px;
+          background: burlywood;
+      }
+      #footing {
+        position: fixed;
+        bottom: 100px;
+      }
+  </style>
+</head>
+
+<!-- The content to be displayed in the browser window is in the body section-->
+<body>
+
+<!-- this is the page's header-->
+<header>
+    <!-- ids and classes help us style our content with CSS -->
+    <div id="heading"> 
+        <h2>
+        <a class="link">About Us</a>
+        <a class="link" href="https://google.com">Google.com</a>
+        <a class="link">Home page</a>
+        </h2>
+        <div id="search">
+        Search Bar
+        </div>
+    </div>
+    
+
+</header>
+<nav id="nav">
+    <a href="https://google.com">My friend's page</a>
+</nav>
+<p id="body">
+Body text loooooooooooooooooooooooooooooooooooooooooooooooooong text Body text loooooooooooooooooooooooooooooooooooooooooooooooooong text Body text loooooooooooooooooooooooooooooooooooooooooooooooooong textBody text loooooooooooooooooooooooooooooooooooooooooooooooooong textBody text loooooooooooooooooooooooooooooooooooooooooooooooooong text
+</p>
+<footer id="footing">
+    This is a footer ----------------------------------------------------------------------------------------
+</footer>
+</body>
+
+</html>
