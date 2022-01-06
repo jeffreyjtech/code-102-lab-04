@@ -6,7 +6,7 @@
   <title>Our Beautiful Gallery</title>
   <link href="style.css" type="text/css" rel="stylesheet">
 </head>
-<body>
+<body id='bodyid'>
 
 <!-- this is the page's header-->
 <header>
@@ -15,6 +15,7 @@
         <h1>
             Our Beautiful Gallery
         </h1>
+        <div id='timedisplay'></div>
     </div>
 
 </header>
@@ -47,6 +48,30 @@
     Mt Rainer from the air<br>
     <img src="MtRainierAerial.jpg"><br>
 </p>
+
+
+<script>
+
+    let fakedeletebool = false
+    
+    fakedeletebool = window.confirm('Delete this webpage before viewing?')
+
+    if (fakedeletebool) {
+        document.getElementById('bodyid').textContent = "You deleted it you fool. Press \"Cancel\" next time."
+    }
+    else{
+        let usercolor = 'black'
+        usercolor = window.prompt('What color would you like the text?')
+        document.getElementById('bodyid').style.color = usercolor
+    }
+
+    const dateObject = new Date()
+    const currentyear = dateObject.getFullYear()
+    const currentday = dateObject.getDate()
+    const currentmonth = dateObject.getMonth() + 1
+
+    document.getElementById('timedisplay').textContent = 'Current date: ' + currentyear + ' / ' + currentmonth + ' / ' + currentday
+</script>
 
 </body>
 

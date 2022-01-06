@@ -3,7 +3,7 @@
 
 #heading {
     background: silver;
-    height: 50px;
+    height: auto;
     width: 100%;
     text-align: center;
     margin: 0 auto;
@@ -31,8 +31,9 @@
     min-width: 500px;
 }
 
-body {
+#bodyid {
     background-color: #5880E0;
+    color: black;
 }
 
 nav {
