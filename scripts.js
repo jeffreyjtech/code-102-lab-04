@@ -1,32 +1,39 @@
 // Lab 07 JS; Jeffrey Jenkins; 1-6-22
 
 // initializing variables and constants that I want to be in the "global" scope
-let userdeletechoice = false
 const dateObject = new Date()
-let datestring = getDateString()
 const mtURLs = ['LakeVahalla.jpg','MtRainier.jpg','FromAMountain.jpg','MtRainierAerial.jpg','MtRainierValleys.jpg']
 
-// Adds a date display to the header
+// this function creates a string with date format YYYY / M / D
+function getDateString(){
+    const currentyear = dateObject.getFullYear()
+    const currentday = dateObject.getDate()
+    const currentmonth = dateObject.getMonth() + 1
+
+    return 'Current date: ' + currentyear + ' / ' + currentmonth + ' / ' + currentday
+}
+
+let datestring = getDateString()
+
+// Adds a date display to the header and writes in the datestring
 document.getElementById('date-display').textContent += datestring
 
-// Asks the user if they want to "delete" the webpage
-userdeletechoice = confirm('Delete this webpage before viewing?')
-
-// Replaces all the content of the <body> element with a snarky message IF the argument passed into
-// deletebool is true
-// Else asks the user if they want to choose the body text color
-function pageDeleter(deletebool){
-    if (deletebool) {
-        document.body.textContent = "You deleted it you fool. Press \"Cancel\" next time."
-    }
-    else{
-        let usercolor = 'black'
-        usercolor = prompt('What color would you like the text?')
-        document.body.style.color = usercolor;
+// Asks the user if they want to "delete" the webpage, won't accept a yes though
+function askUserDelete(){
+    let answer = prompt('Delete this webpage before viewing?')
+    console.log(answer)
+    if (answer.toLowerCase() === 'yes'){
+        do{
+        answer = prompt('Actually you can\'t, try a different answer')
+        } while (answer.toLowerCase() === 'yes')
     }
 }
 
-howManyMountains()
+function colorChoice(){
+    let usercolor = 'black'
+    usercolor = prompt('What color would you like the heading text?')
+    document.body.style.color = usercolor;
+}
 
 function howManyMountains(){
 
@@ -50,14 +57,10 @@ function addImageElement(URL, qty){
     document.getElementById('galleryparent').insertBefore(newImg, insertlocation)
 }
 
-function getDateString(){
-    const currentyear = dateObject.getFullYear()
-    const currentday = dateObject.getDate()
-    const currentmonth = dateObject.getMonth() + 1
-
-    return 'Current date: ' + currentyear + ' / ' + currentmonth + ' / ' + currentday
-}
+// call prompt functions
+askUserDelete()
+colorChoice()
+howManyMountains()
 
 // pageDeleter is called last so it overwites content changed by the previous code
-pageDeleter(userdeletechoice)
 console.log('My javascript ran to the end')
