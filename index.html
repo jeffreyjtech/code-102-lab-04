@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<!-- Lab 07 page; Jeffrey Jenkins; 1-6-22 -->
+<!-- Lab 07 & 08 page; Jeffrey Jenkins; 1-6-22 -->
 <head>
   <meta attribute="true" charset="utf-8">
   <title>Our Beautiful Gallery</title>
@@ -8,68 +8,47 @@
 </head>
 <body>
 
-<!-- this is the page's header-->
-<!-- the 'content' id is being used for our JavaScript -->
-<header id="content-1">
-    <!-- ids and classes help us style our content with CSS -->
-    <div id="heading"> 
-        <h1>
-            Our Beautiful Gallery
-        </h1>
-        <div id='date-display'></div>
-    </div>
+    <header id="content-1">
+        <div id="heading"> 
+            <h1>
+                Our Beautiful Gallery
+            </h1>
+            <div id='date-display'></div>
+        </div>
 
-</header>
+    </header>
 
-<nav>
-<button>
-    <div id="treeslink">
-        <h2>
-            <a href="https://bradyjcamp.github.io/Lab-04-HTML-website/Index.html">Trees</a>
-        </h2>
-    </div>
-</button>
-<button>
-    <div id="mountainslink">
-        <h2>
-            Mountains
-        </h2>
-    </div>
-</button>
-</nav>
+    <nav>
+    <button>
+        <div id="treeslink">
+            <h2>
+                <a href="https://bradyjcamp.github.io/Lab-04-HTML-website/Index.html">Trees</a>
+            </h2>
+        </div>
+    </button>
+    <button>
+        <div id="mountainslink">
+            <h2>
+                Mountains
+            </h2>
+        </div>
+    </button>
+    </nav>
 
-<!-- this is an HTML input element, kinda useless alone-->
-<!-- <input type="text"> -->
-
-<main id='galleryparent'>
-<p id='1'>
-    <!-- commenting out in anticipation of using a script to add these contents
-    Lichtenberg Mountain near Lake Vahalla<br>
-    <img src="LakeVahalla.JPG"><br>
-    
-    Mt Rainer's valleys<br>
-    <img src="MtRainierValleys.jpg"><br>
-
-    Mt Rainer Peak from around Packwood Lake<br>
-    <img src="MtRainier.jpg"><br>
-
-    Mt Rainer from an airplane<br>
-    <img src="MtRainierAerial.jpg"><br>
-
-    Godrays from a Mountain (Goose Rock at Deception Pass)<br>
-    <img src="FromAMountain.jpg"><br>
-    -->
-</p>
-<p id='2'></p>
-<p id='3'></p>
-<p id='4'></p>
-<p id='5'></p>
-</main>
+    <!-- this <main> element needs some sort of id, since it's the parent of the <p>'s which receive the dynamic image elements -->
+    <main id='galleryparent'>
+        <!-- these p elements with ids 1 through 5 are used to add in the mountain pictures -->
+        <p id='1'></p>
+        <p id='2'></p>
+        <p id='3'></p>
+        <p id='4'></p>
+        <p id='5'></p>
+        <p><br>Pictures belong to the page author, Jeffrey Jenkins</p>
+    </main>
 
 <!-- the <script> tag encloses JavaScript in HTML -->
 <!-- here we're using a separate file to load our JavaScript -->
 <script src='scripts.js'></script>
 
 </body>
-
 </html>
