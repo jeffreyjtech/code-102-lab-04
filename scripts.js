@@ -1,6 +1,6 @@
-// Lab 07 JS; Jeffrey Jenkins; 1-6-22
+// Lab 07 + Lab 08 JS; Jeffrey Jenkins; 1-6-22
 
-// initializing variables and constants that I want to be in the "global" scope
+// initializing variables and constants that I want to be in the "global" scope, mainly for conceptual reasons
 const dateObject = new Date()
 const mtURLs = ['LakeVahalla.jpg','MtRainier.jpg','FromAMountain.jpg','MtRainierAerial.jpg','MtRainierValleys.jpg']
 
@@ -15,7 +15,7 @@ function getDateString(){
 
 let datestring = getDateString()
 
-// Adds a date display to the header and writes in the datestring
+// Writes the datestring into the "date-display" element
 document.getElementById('date-display').textContent += datestring
 
 // Asks the user if they want to "delete" the webpage, won't accept a yes though
@@ -38,11 +38,11 @@ function colorChoice(){
 function howManyMountains(){
 
     // asks how many mountains user wants to see, minus 1 in order to adjust for the image array index starting at 0, not 1.
-    let mtqty = prompt('How many mountain pictures do you want to see?') - 1
+    let mtqty = prompt('How many mountain pictures do you want to see? Choose from 1 to 5.') - 1
     do{
         addImageElement(mtURLs[mtqty], mtqty)
         mtqty--
-    } while (mtqty >= 0)
+    } while ((mtqty >= 0) && (mtqty < 4))
 }
 
 // this function creates an image element with document.createElement('img')
