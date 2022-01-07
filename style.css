@@ -1,49 +1,65 @@
 /* applies a 1px border to all elements */
 /* * {border: solid 1px;} */
 
+body {
+    background-color: #4D5F75;
+}
+
 #heading {
     background: silver;
     height: auto;
-    width: 100%;
+    width: 25em;
     text-align: center;
+    border: solid thin black;
     margin: 0 auto;
-}
-
-#treeslink {
-    height: 75px;
-    width: 120px;
-    float: left;
-    text-align: center;
-    background: #6EE0B5;
-}
-
-#mountainslink {
-    height: 75px;
-    width: 120px;
-    text-align: center;
-    float: right;
-    background: #E09E63;
-}
-
-#bodytext {
-    width: 80%;
-    top: 100px;
-    min-width: 500px;
-}
-
-#bodyid {
-    background-color: #5880E0;
-    color: black;
+    padding-bottom: 1em;
 }
 
 nav {
-    height: 100px;
-    border: 2px solid black;
+    text-align: center;
+    border: solid thin black;
     /* margin seperates elements from other elements
     /* margin percentages are calculated from the element's direct parent*/
-    width: 100%;
-    margin: 10px;
+    width: 25em;
+    margin-left: auto;
+    margin-right: auto;
     /* padding separates an elements "interior" contents from the border */
     /* padding will always increase the total size of an element*/
     background: #324F94;
 }
+
+button {
+    margin: 1em;
+}
+
+#treeslink {
+    width: 120px;
+    text-align: center;
+    background: #6EE0B5;
+    display: inline-block;
+}
+
+#mountainslink {
+    width: 120px;
+    text-align: center;
+    display: inline-block;
+    background: #E09E63;
+}
+
+main {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    padding: 1em;
+    width: 80%;
+    top: 100px;
+    min-width: 500px;
+    background-color: #467CC2;
+    border: solid thin black;
+}
+
+img {
+    border: solid thin black;
+    margin-bottom: 1em;
+}
+

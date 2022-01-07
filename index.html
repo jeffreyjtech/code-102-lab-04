@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <html>
-<!-- Lab 04 page; Jeffrey Jenkins; 1-4-22-->
+<!-- Class 05 & 06 & 07 page; Jeffrey Jenkins; 1-5-22 -->
 <head>
   <meta attribute="true" charset="utf-8">
   <title>Our Beautiful Gallery</title>
   <link href="style.css" type="text/css" rel="stylesheet">
 </head>
-<body id='bodyid'>
+<body>
 
 <!-- this is the page's header-->
-<header>
+<!-- the 'content' id is being used for our JavaScript -->
+<header id="content-1">
     <!-- ids and classes help us style our content with CSS -->
     <div id="heading"> 
         <h1>
@@ -21,57 +22,47 @@
 </header>
 
 <nav>
-<div id="treeslink">
-    <h2>
-        <a href="https://bradyjcamp.github.io/Lab-04-HTML-website/Index.html">Trees</a>
-    </h2>
-</div>
-<div id="mountainslink">
-    <h2>
-        Mountains
-    </h2>
-</div>
+<button>
+    <div id="treeslink">
+        <h2>
+            <a href="https://bradyjcamp.github.io/Lab-04-HTML-website/Index.html">Trees</a>
+        </h2>
+    </div>
+</button>
+<button>
+    <div id="mountainslink">
+        <h2>
+            Mountains
+        </h2>
+    </div>
+</button>
 </nav>
 
+<!-- this is an HTML input element, kinda useless alone-->
+<!-- <input type="text"> -->
 
-<p id="bodytext">
-
-    Unknown mountain near Lake Vahalla<br>
+<main>
+<p>
+    Lichtenberg Mountain near Lake Vahalla<br>
     <img src="LakeVahalla.JPG"><br>
-
-    Mt Rainer Valleys<br>
+    
+    Mt Rainer's valleys<br>
     <img src="MtRainierValleys.jpg"><br>
 
     Mt Rainer Peak from around Packwood Lake<br>
     <img src="MtRainier.jpg"><br>
 
-    Mt Rainer from the air<br>
+    Mt Rainer from an airplane<br>
     <img src="MtRainierAerial.jpg"><br>
+
+    Godrays from a Mountain (Goose Rock at Deception Pass)<br>
+    <img src="FromAMountain.jpg"><br>
 </p>
+</main>
 
-
-<script>
-
-    let fakedeletebool = false
-    
-    fakedeletebool = window.confirm('Delete this webpage before viewing?')
-
-    if (fakedeletebool) {
-        document.getElementById('bodyid').textContent = "You deleted it you fool. Press \"Cancel\" next time."
-    }
-    else{
-        let usercolor = 'black'
-        usercolor = window.prompt('What color would you like the text?')
-        document.getElementById('bodyid').style.color = usercolor
-    }
-
-    const dateObject = new Date()
-    const currentyear = dateObject.getFullYear()
-    const currentday = dateObject.getDate()
-    const currentmonth = dateObject.getMonth() + 1
-
-    document.getElementById('timedisplay').textContent = 'Current date: ' + currentyear + ' / ' + currentmonth + ' / ' + currentday
-</script>
+<!-- the <script> tag encloses JavaScript in HTML -->
+<!-- here we're using a separate file to load our JavaScript -->
+<script src='scripts.js'></script>
 
 </body>
 
