@@ -1,2 +1,3 @@
-# code-102-lab-04
-The repo for Jeffrey Jenkins's Code 102 Lab 04 website.
+# Code 102 Mountain Gallery Webpage
+
+An image gallery webpage I made in Code 102 Lab 4 and iterated upon throughout the rest of Code 102 as we learned new material.
